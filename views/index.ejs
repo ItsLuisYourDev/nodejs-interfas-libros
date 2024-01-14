@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs') %>
+    <main>
+        <div class="container">
+            <h2>Mis libros</h2>
+            <ul>
+                <% for (let i=0; i < libros.length; i++) { %>
+                    <li>
+                        <div class="contenido">
+                            <!-- <img src="https://cdn.pixabay.com/photo/2018/02/16/10/23/web-3157323_1280.jpg" alt="Imagen"> -->
+                            <img src="<%=libros[i].img%>" alt="Imagen">
+                            <div class="datos">
+                                <strong>Título:</strong>
+                                <%= libros[i].titulo %><br>
+                                    <strong>Autor:</strong>
+                                    <%= libros[i].autor %><br>
+                                        <strong>Año:</strong>
+                                        <%= libros[i].descripcion %>
+                            </div>
+                        </div>
+                        <div class="contenido-boton">
+                            <input type="submit" onclick="view('<%= user %>', '<%=libros[i]._id%>')" value="Ver">
+                        </div>
+                    </li>
+                    <% } %>
+            </ul>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    </body>
+    <%- include('partials/footer.ejs') %>

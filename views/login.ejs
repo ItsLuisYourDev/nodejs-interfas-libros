@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="css/style-loggin.css">
+</head>
+
+<body>
+    <form id="loginForm" action="/login" method="post">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+        <br>
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+        <br>
+        <button type="button" onclick="enviarFormulario()">Iniciar Sesión</button>
+        <button type="button" onclick="register()">registrarse</button>
+    </form>
+</body>
+
+<%- include('partials/footer.ejs') %>

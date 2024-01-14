@@ -1,0 +1,23 @@
+POST http://127.0.0.1:3000/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre":"lomadoes ",
+    "pass": "1123"
+
+}
+
+####
+POST http://127.0.0.1:3000/db HTTP/1.1
+Content-Type: application/json
+
+{
+    "categoria":"nicole"
+
+}
+
+###
+GET http://localhost:3000/db/
+
+###
+GET http://localhost:3000/db/VOFsMQQnLzgiXrHL
