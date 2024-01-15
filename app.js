@@ -1,10 +1,11 @@
-const express = require("express");
-const session = require('express-session');
-// const cors = require("cors")
-// const sqlite3 = require('sqlite3');
+//!importar librerias
+const express = require("express");//? importar el servidor 
+const session = require('express-session');//? importar ajustes para la sesion
+// const cors = require("cors") //+ para trabajar con los cords
+//!ajustes del servidor 
 const app = express()
-// app.use(cors());
-app.use(express.json());
+// app.use(cors()); //+ aplicar cord a express
+app.use(express.json());//? para sopertar json
 app.use(express.urlencoded({extended:false}))
 app.set("port", 3000)
 app.use(express.static("./public"))
@@ -16,4 +17,7 @@ app.use(
     saveUninitialized: true,
   })
 );
-module.exports = app
+//! Colocar las rutas depsues del midelware para que funcione la sesion
+app.use("/",require("./router/app"))
+
+module.exports = app//? exporta las modulos

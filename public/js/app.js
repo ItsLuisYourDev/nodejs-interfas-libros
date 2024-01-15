@@ -1,5 +1,5 @@
-// const apiServer='http://127.0.0.1:3000'
-const apiServer='http://192.168.0.103:3000'
+const apiServer='http://127.0.0.1:3000'
+// const apiServer='http://192.168.0.103:3000'
 function enviarFormulario() {
     //! optener el usuario y contrasenia de el formulario html
     const user = document.getElementById('usuario');
